@@ -7,8 +7,14 @@ import utilities.Driver;
 
 public class HmcPage {
 
-    PageFactory.initElements(Driver.getDriver(),this);
+  public HmcPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//*[text()='Log in']")
-    public WebElement login;
+
+  @FindBy(xpath = "//*[text()='Log in']")
+  public WebElement login;
+  @FindBy(xpath = "//*[@id='UserName']")
+  public WebElement userName;
+  @FindBy(xpath = "//*[@class='username username-hide-on-mobile']")
+  public WebElement girisYapildi;
+
 }
