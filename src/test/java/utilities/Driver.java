@@ -22,22 +22,24 @@ public class Driver {
                 case "chrome" :
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    break;
 
                 case "edge" :
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
+                    break;
 
                 case "firefox" :
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
+                    break;
 
                 case "headless-chrome" :
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    break;
 
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+
             }
 
 
