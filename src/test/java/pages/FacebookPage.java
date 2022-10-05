@@ -7,20 +7,64 @@ import utilities.Driver;
 
 public class FacebookPage {
 
-    public FacebookPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public FacebookPage() {
+
+        PageFactory.initElements(Driver.getDriver(), this);
+
     }
 
-    @FindBy(id = "email")
+    @FindBy(xpath = "//*[@id='email']")
     public WebElement email;
+    @FindBy(xpath = "//*[@id='pass']")
+    public WebElement sifre;
+    @FindBy(xpath = "//*[@class='_9ay7']")
+    public WebElement girisYapilmadi;
+    @FindBy(xpath = "//*[@class='_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy']")
+    public WebElement login;
 
 
-    @FindBy(id = "pass")
-    public WebElement password;
 
-    @FindBy(xpath = "//button[@name='login']")
-    public WebElement girisYap;
 
-    @FindBy(xpath = "//div[text()='Girdiğin e-posta bir hesaba bağlı değil. ']")
-    public WebElement girisBasarisizText;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
